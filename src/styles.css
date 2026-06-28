@@ -1,0 +1,263 @@
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { overflow-x: hidden; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+img { max-width: 100%; height: auto; }
+
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+@import "@fontsource/space-grotesk/400.css";
+@import "@fontsource/space-grotesk/500.css";
+@import "@fontsource/space-grotesk/600.css";
+@import "@fontsource/space-grotesk/700.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+
+/* Louize — custom display serif used on mymind.com */
+@font-face {
+  font-family: "Louize";
+  src: url("/fonts/Louize-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Louize";
+  src: url("/fonts/Louize-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Louize";
+  src: url("/fonts/Louize-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Louize";
+  src: url("/fonts/Louize-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-display: "Louize", "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Louize", Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-mm-orange: #FF5924;
+  --color-mm-yellow: #FFE926;
+  --color-mm-pink: #FF7DD3;
+  --color-mm-red: #FF6866;
+  --color-mm-green: #5CB13E;
+  --color-mm-blue: #85D3FF;
+  --color-mm-dark: #24272D;
+  --color-mm-gray: #748297;
+  --color-mm-border: #E2E6EE;
+  --color-mm-subtle: #F0F2F5;
+}
+
+:root {
+  --radius: 0.75rem;
+}
+
+@layer base {
+  html {
+    background: #ffffff;
+    color-scheme: light;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #24272D;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Louize", "Space Grotesk", serif;
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background: rgba(255, 89, 36, 0.15);
+    color: #24272D;
+  }
+}
+
+/* mymind Custom styling */
+.bubble {
+  display: inline-block;
+  border-radius: 36px;
+  padding: 4px 18px;
+  margin: 0 2px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: -0.01em;
+  transition: all 0.2s ease-in-out;
+}
+
+.bubble.orange {
+  background: linear-gradient(180deg, rgba(233, 143, 83, 0.06) 0%, rgba(233, 143, 83, 0) 100%);
+  color: #E98F53;
+  border: 1px solid #E98F53;
+}
+
+.bubble.pink {
+  background: linear-gradient(180deg, rgba(228, 138, 191, 0.06) 0%, rgba(228, 138, 191, 0) 100%);
+  color: #E48ABF;
+  border: 1px solid #E48ABF;
+}
+
+.bubble.blue {
+  background: linear-gradient(180deg, rgba(153, 210, 251, 0.06) 0%, rgba(153, 210, 251, 0) 100%);
+  color: #99D2FB;
+  border: 1px solid #99D2FB;
+}
+
+.bubble.red {
+  background: linear-gradient(180deg, rgba(234, 114, 107, 0.06) 0%, rgba(234, 114, 107, 0) 100%);
+  color: #EA726B;
+  border: 1px solid #EA726B;
+}
+
+.bubble.yellow {
+  background: linear-gradient(180deg, rgba(255, 207, 39, 0.06) 0%, rgba(255, 207, 39, 0) 100%);
+  color: #FFCF27;
+  border: 1px solid #FFCF27;
+}
+
+@media screen and (max-width: 767px) {
+  .bubble {
+    padding: 4px 16px;
+    margin: 0 1px;
+    font-size: 16px;
+  }
+}
+
+/* Reviews section gradient background */
+.reviews-section {
+  position: relative;
+  z-index: 1;
+}
+
+.reviews-section-gradient {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 100%;
+  width: 100%;
+  object-fit: cover;
+  -webkit-mask-image: radial-gradient(circle, #fff 45%, transparent 76%);
+  mask-image: radial-gradient(circle, #fff 45%, transparent 76%);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* YouTube Video Lightbox Overlay */
+.video-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(8px);
+}
+
+.close-video {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+.close-video:hover {
+  transform: scale(1.1);
+}
+
+.yt-video-container {
+  width: 90%;
+  max-width: 960px;
+  aspect-ratio: 16/9;
+  background: black;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.responsive-video {
+  width: 100%;
+  height: 100%;
+}
+
+.responsive-video iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* Industry grid — clean borders per row on mobile (3-col) and desktop (9-col) */
+.industry-grid > * {
+  border-right: 1px solid #E2E6EE;
+  border-bottom: 1px solid #E2E6EE;
+}
+.industry-grid > *:nth-child(3n) {
+  border-right: none;
+}
+@media (min-width: 640px) {
+  .industry-grid > *:nth-child(3n) {
+    border-right: 1px solid #E2E6EE;
+  }
+  .industry-grid > *:last-child {
+    border-right: none;
+  }
+  .industry-grid > *:nth-last-child(-n+9):nth-child(9n+1) ~ * {
+    border-bottom: none;
+  }
+}
+
+/* scrollbar-none utility */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth transitions */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Section overflow protection */
+section {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
