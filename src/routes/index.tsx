@@ -15,6 +15,7 @@ import { MymindUseCases } from "@/components/mymind/MymindUseCases";
 import { MymindPhilosophy } from "@/components/mymind/MymindPhilosophy";
 import { MymindDownloads } from "@/components/mymind/MymindDownloads";
 import { MymindFooter } from "@/components/mymind/MymindFooter";
+import AddOnsSection from "@/components/AddOnsSection";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -72,6 +73,7 @@ function MymindPage() {
       <MymindUseCases />
       <MymindPhilosophy />
       <MymindDownloads />
+      <AddOnsSection/>
       <MymindFooter />
     </div>
   );

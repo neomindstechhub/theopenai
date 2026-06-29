@@ -845,12 +845,10 @@ export function MymindTestimonials() {
                   style={{ willChange: "transform" }}
                 >
                   <div
-                    className="relative rounded-[2rem] bg-white px-5 sm:px-6 py-4 sm:py-5"
+                    className="relative rounded-4xl bg-white px-5 sm:px-6 py-4 sm:py-5"
                     style={{ boxShadow: "0 8px 40px rgba(0,0,0,0.08)" }}
                   >
-                    <p
-                      className="text-sm leading-relaxed md:text-base text-left font-sans text-mm-dark"
-                    >
+                    <p className="text-sm leading-relaxed md:text-base text-left font-sans text-mm-dark">
                       &ldquo;{t.text}&rdquo;
                     </p>
                     <div
@@ -936,12 +934,10 @@ export function MymindTestimonials() {
                   style={{ willChange: "transform" }}
                 >
                   <div
-                    className="relative rounded-[2rem] bg-white px-5 sm:px-6 py-4 sm:py-5"
+                    className="relative rounded-4xl bg-white px-5 sm:px-6 py-4 sm:py-5"
                     style={{ boxShadow: "0 8px 40px rgba(0,0,0,0.08)" }}
                   >
-                    <p
-                      className="text-sm leading-relaxed md:text-base text-left font-sans text-mm-dark"
-                    >
+                    <p className="text-sm leading-relaxed md:text-base text-left font-sans text-mm-dark">
                       &ldquo;{t.text}&rdquo;
                     </p>
                     <div
