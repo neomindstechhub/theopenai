@@ -56,14 +56,19 @@ export function MymindManifesto() {
                   marginTop: "0.05em",
                 }}
               >
-                In
+                Running 
               </span>
-              {" "}a time when agencies charge $3,200 for a website you can't even edit, when
-              DIY builders trick you with introductory pricing that triples on renewal, when your
-              web guy ghosts you and takes your source code — we've lost something important.
+              {" "}a business has never been easy. But finding the right help shouldn't be the hardest part.
+              Every day, business owners are flooded with agencies selling websites, marketers promising leads, and software claiming to solve every problem. Yet very few stop to answer the most important question
             </p>
 
-            <p className="mb-10">The ability to own your presence online —</p>
+            <p className="mb-10 font-bold">What does your business actually need right now?</p>
+            <p className="mb-5 ">Some businesses need a better website.</p>
+            <p className="mb-5 ">Some need stronger marketing.</p>
+            <p className="mb-5 ">Some need automation.</p>
+            <p className="mb-5 ">Others simply need the right strategy before investing another rupee.</p>
+            <p className="mb-10 ">Instead of receiving guidance, most businesses receive sales pitches.</p>
+            <p className="mb-5 ">We built <span className="font-bold">The Open AI</span> to change that.</p>
 
             <p className="mb-10">
               without a computer science degree, without a $1,000 monthly retainer, without

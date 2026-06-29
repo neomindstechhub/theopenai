@@ -118,7 +118,7 @@ export function MymindNav() {
               Log in
             </Link>
             <Link
-              to="/signup"
+              to="/assessment"
               className="rounded-full px-5 py-2 text-sm font-semibold text-white transition-all duration-200 hover:opacity-90"
               style={{ background: "#FF5924", minHeight: 44, display: "flex", alignItems: "center" }}
             >
