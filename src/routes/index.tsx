@@ -16,6 +16,8 @@ import { MymindPhilosophy } from "@/components/mymind/MymindPhilosophy";
 import { MymindDownloads } from "@/components/mymind/MymindDownloads";
 import { MymindFooter } from "@/components/mymind/MymindFooter";
 import AddOnsSection from "@/components/AddOnsSection";
+import { MymindContact } from "@/components/mymind/MymindContact";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -74,6 +76,7 @@ function MymindPage() {
       <MymindPhilosophy />
       <MymindDownloads />
       <AddOnsSection/>
+      <MymindContact />
       <MymindFooter />
     </div>
   );

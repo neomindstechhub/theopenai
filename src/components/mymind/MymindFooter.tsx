@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Link } from "@tanstack/react-router";
+
 import {
   Mail,
   Phone,
@@ -186,16 +188,30 @@ export function MymindFooter() {
                 { label: "About Us", href: "#" },
                 { label: "How It Works", href: "#" },
                 { label: "Pricing", href: "#" },
-                { label: "Contact Us", href: "#" },
-              ].map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="text-sm text-mm-dark/70 hover:text-mm-orange transition-colors"
-                >
-                  {link.label}
-                </a>
-              ))}
+                { label: "Contact Us", to: "/", hash: "contact" },
+              ].map((link) => {
+                if (link.to) {
+                  return (
+                    <Link
+                      key={link.label}
+                      to={link.to}
+                      hash={link.hash}
+                      className="text-sm text-mm-dark/70 hover:text-mm-orange transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  );
+                }
+                return (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="text-sm text-mm-dark/70 hover:text-mm-orange transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                );
+              })}
             </div>
           </div>
 

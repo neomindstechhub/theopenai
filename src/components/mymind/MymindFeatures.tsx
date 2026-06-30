@@ -10,53 +10,53 @@ interface FeatureItem {
 const ROWS: [FeatureItem, FeatureItem][] = [
   [
     {
-      img: "/images/NOTE.png",
+      img: "/images/seo.png",
       title: "SEO built-in from day one",
-      body: "Proper meta tags, schema markup, local signals, and sitemap — all configured and managed monthly. Most clients see movement on Google within 60–90 days.",
+      body: "Reach more people without paying for every click. Smart SEO helps your business generate long-term traffic and consistent inquiries.",
       narrow: true,
     },
     {
-      img: "/images/BKMRK.webp",
-      title: "Smart CRM",
-      body: "Every form submission, call, and booking lands in one inbox. No spreadsheets, no sticky notes. Your leads are organized and ready to follow up.",
+      img: "/images/Website.png",
+      title: "Websites - Designed to Grow",
+      body: "Build a professional website that earns trust, generates leads, and becomes the foundation of your digital presence.",
     },
   ],
   [
     {
-      img: "/images/READ.webp",
-      title: "Automated review requests",
-      body: "Review requests go out automatically after every job. Clients go from 4.2 to 4.8 stars in months — without lifting a finger.",
+      img: "/images/posts_reels.png",
+      title: "Content Creation (Reels & Posts)",
+      body: "Consistent content keeps your business in front of customers. We create social media content that informs, engages, and converts.  ",
     },
     {
-      img: "/images/COL.webp",
-      title: "Integrated calendar",
-      body: "No need for Calendly. Your booking calendar lives right on your site. Clients book, you get notified, it syncs automatically.",
+      img: "/images/business_profile.png",
+      title: "Google Business Profile - Build Instant Trust ",
+      body: "Strengthen your online credibility with a complete and optimized business profile across Major platforms.",
       narrow: true,
     },
   ],
   [
     {
-      img: "/images/AI.webp",
-      title: "Get found on ChatGPT",
-      body: "Search discovery across AI agents and platforms. Your business gets surfaced when people ask ChatGPT, Perplexity, and AI-powered search engines for recommendations.",
+      img: "/images/marketing.png",
+      title: "Social Media Optimization",
+      body: "Grow your brand with optimized social profiles, engaging content, and strategies that attract the right audience.",
       narrow: true,
     },
     {
-      img: "/images/LNKS.webp",
-      title: "Domain & hosting included",
-      body: "We handle your domain, hosting, SSL, and uptime. Nothing to set up. Nothing to renew. Everything just works — at $9.99/month, all in.",
+      img: "/images/VoiceBot.png",
+      title: "Chat & Voice Bot - Your Business Never Sleeps ",
+      body: "Provide 24/7 voice support, qualify leads, and book appointments automatically through AI-powered voice technology.",
     },
   ],
   [
     {
-      img: "/images/SEREN.webp",
-      title: "Monthly SEO management",
-      body: "SEO isn't a one-time setup. We optimize your content monthly, monitor rankings, and adapt your strategy as Google and AI search evolve.",
+      img: "/images/onground.png",
+      title: "On-Ground Shoot - Professional Visual Storytelling",
+      body: "Create premium-quality visuals that reflect your brand and connect with your audience.",
     },
     {
-      img: "/images/TOMFIN.webp",
-      title: "Real support. Real humans.",
-      body: "Reach us by email, text, or chat. No ticket queues. No waiting on hold. Every edit is done within 24 hours — most the same day.",
+      img: "/images/3d-Images.png",
+      title: "3D  WEBSITES-Experiences That Impress  ",
+      body: "Create immersive 3D experiences that make your business unforgettable and keep visitors engaged.",
       narrow: true,
     },
   ],
@@ -178,7 +178,7 @@ export function MymindFeatures() {
         >
           <div className="relative overflow-hidden" style={{ minHeight: 280 }}>
             <img
-              src="/images/mobile-img.webp"
+              src="/images/email_1.png"
               alt="theopenai on mobile"
               loading="lazy"
               className="absolute right-0 top-0 h-full w-auto object-cover object-right opacity-20 sm:opacity-100"
@@ -209,7 +209,7 @@ export function MymindFeatures() {
                   color: "#ffffff",
                 }}
               >
-                Unlimited edits, forever
+                Email Marketing - Grow Beyond Social Media
               </h3>
               <p
                 className="text-sm leading-relaxed"
@@ -218,9 +218,7 @@ export function MymindFeatures() {
                   fontFamily: "'Inter', sans-serif",
                 }}
               >
-                New promo, holiday redesign, photo update, business hours change
-                — just message us. We handle it within 24 hours. No extra
-                charge. Ever.
+                From promotions to newsletters, email marketing helps turn interest into long-term loyalty
               </p>
             </div>
           </div>
