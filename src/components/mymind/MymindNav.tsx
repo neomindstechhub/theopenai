@@ -76,9 +76,11 @@ export function MymindNav() {
         >
           {/* Logo */}
           <a href="/" className="flex items-center gap-2">
-            <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: "1.25rem", color: "#111418", letterSpacing: "-0.04em" }}>
-              the<span style={{ color: "#FF5924" }}>openai</span>
-            </span>
+            <img
+              src="/logos/logo.PNG"
+              alt="theopenai logo"
+              style={{ height: "65px", width: "auto", display: "block" }}
+            />
           </a>
 
           {/* Center nav */}
