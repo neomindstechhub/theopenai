@@ -72,6 +72,17 @@ img { max-width: 100%; height: auto; }
   --color-mm-bg-gray: #F3F4F7;
   --color-mm-bg-wrap: #F9FAFC;
   --color-mm-border-light: #E6DBDB;
+
+  --color-mm-role-designers-bg: #232A35;
+  --color-mm-role-writers-bg: #FDF0F5;
+  --color-mm-role-marketers-bg: #F1F5FD;
+  --color-mm-role-developers-bg: #232A35;
+  --color-mm-role-researchers-bg: #E9F6ED;
+  --color-mm-role-everyone-bg: #F4F5F7;
+  --color-mm-role-text-dark: #2A3444;
+  --color-mm-role-text-green: #344238;
+  --color-mm-role-text-purple: #23152F;
+  --color-mm-muted-gray: #a1aab9;
 }
 
 :root {
