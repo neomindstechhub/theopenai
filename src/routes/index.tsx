@@ -18,7 +18,6 @@ import { MymindFooter } from "@/components/mymind/MymindFooter";
 import AddOnsSection from "@/components/AddOnsSection";
 import { MymindContact } from "@/components/mymind/MymindContact";
 
-
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -28,7 +27,10 @@ export const Route = createFileRoute("/")({
         content:
           "Get the website your business deserves in 24 hours. No DIY. We design. We manage. $9.99/month. SEO, CRM, reviews and unlimited edits included.",
       },
-      { property: "og:title", content: "theopenai — Website + CRM + SEO. Done for you." },
+      {
+        property: "og:title",
+        content: "theopenai — Website + CRM + SEO. Done for you.",
+      },
       {
         property: "og:description",
         content:
@@ -61,10 +63,22 @@ function MymindPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white]">
+    <div className="min-h-screen bg-white">
       <MymindNav />
-      <MymindHero />
-      <MymindIntroVideo />
+      <div
+        className="relative w-full overflow-hidden"
+        style={{
+          background: `
+            radial-gradient(ellipse 55% 50% at 8% 30%, rgba(255, 110, 40, 0.82) 0%, transparent 60%),
+            radial-gradient(ellipse 55% 50% at 92% 30%, rgba(255, 155, 125, 0.72) 0%, transparent 60%),
+            radial-gradient(ellipse 52% 40% at 50% 28%, #ffffff 0%, rgba(255, 242, 236, 0.96) 42%, transparent 72%),
+            linear-gradient(180deg, #ffd4b8 0%, #ffe8d8 25%, #ffc8b4 60%, #ffffff 100%)
+          `,
+        }}
+      >
+        <MymindHero />
+        <MymindIntroVideo />
+      </div>
       <MymindManifesto />
       <MymindSmartBookmarking />
       {/* <MymindAI /> */}
@@ -75,7 +89,7 @@ function MymindPage() {
       <MymindUseCases />
       <MymindPhilosophy />
       <MymindDownloads />
-      <AddOnsSection/>
+      <AddOnsSection />
       <MymindContact />
       <MymindFooter />
     </div>

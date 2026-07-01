@@ -4,10 +4,11 @@ import { X, Menu } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
 const NAV_LINKS = [
-  { label: "Product", dot: "#FF5924", href: "#" },
-  { label: "Pricing", dot: "#FFE926", href: "/plans" },
-  { label: "Compare", dot: "#FF7DD3", href: "#" },
-  { label: "Blog", dot: "#5CB13E", href: "#" },
+  { label: "What", dot: "#FF5924", href: "/" },
+  { label: "Why", dot: "#FF9224", href: "/why" },
+  { label: "How", dot: "#FFE926", href: "/how" },
+  { label: "About Us", dot: "#FF7DD3", href: "#" },
+  { label: "Pricing", dot: "#5CB13E", href: "/plans" },
 ];
 
 export function MymindNav() {
