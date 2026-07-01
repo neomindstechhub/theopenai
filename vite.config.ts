@@ -15,4 +15,9 @@ export default defineConfig({
   nitro: {
     preset: "vercel",
   },
+  vite: {
+    server: {
+      allowedHosts: ["talented-albacore-utterly.ngrok-free.app"],
+    },
+  },
 });
