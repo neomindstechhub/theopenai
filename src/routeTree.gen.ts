@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WhyRouteImport } from './routes/why'
 import { Route as SignupRouteImport } from './routes/signup'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as AssessmentRouteImport } from './routes/assessment'
@@ -17,6 +18,11 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ClientProjectsRouteImport } from './routes/_client/projects'
 import { Route as ClientDashboardRouteImport } from './routes/_client/dashboard'
 
+const WhyRoute = WhyRouteImport.update({
+  id: '/why',
+  path: '/why',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SignupRoute = SignupRouteImport.update({
   id: '/signup',
   path: '/signup',
@@ -57,6 +63,7 @@ export interface FileRoutesByFullPath {
   '/assessment': typeof AssessmentRoute
   '/login': typeof LoginRoute
   '/signup': typeof SignupRoute
+  '/why': typeof WhyRoute
   '/dashboard': typeof ClientDashboardRoute
   '/projects': typeof ClientProjectsRoute
 }
@@ -65,6 +72,7 @@ export interface FileRoutesByTo {
   '/assessment': typeof AssessmentRoute
   '/login': typeof LoginRoute
   '/signup': typeof SignupRoute
+  '/why': typeof WhyRoute
   '/dashboard': typeof ClientDashboardRoute
   '/projects': typeof ClientProjectsRoute
 }
@@ -75,15 +83,29 @@ export interface FileRoutesById {
   '/assessment': typeof AssessmentRoute
   '/login': typeof LoginRoute
   '/signup': typeof SignupRoute
+  '/why': typeof WhyRoute
   '/_client/dashboard': typeof ClientDashboardRoute
   '/_client/projects': typeof ClientProjectsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/assessment' | '/login' | '/signup' | '/dashboard' | '/projects'
+    | '/'
+    | '/assessment'
+    | '/login'
+    | '/signup'
+    | '/why'
+    | '/dashboard'
+    | '/projects'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/assessment' | '/login' | '/signup' | '/dashboard' | '/projects'
+  to:
+    | '/'
+    | '/assessment'
+    | '/login'
+    | '/signup'
+    | '/why'
+    | '/dashboard'
+    | '/projects'
   id:
     | '__root__'
     | '/'
@@ -91,6 +113,7 @@ export interface FileRouteTypes {
     | '/assessment'
     | '/login'
     | '/signup'
+    | '/why'
     | '/_client/dashboard'
     | '/_client/projects'
   fileRoutesById: FileRoutesById
@@ -101,10 +124,18 @@ export interface RootRouteChildren {
   AssessmentRoute: typeof AssessmentRoute
   LoginRoute: typeof LoginRoute
   SignupRoute: typeof SignupRoute
+  WhyRoute: typeof WhyRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/why': {
+      id: '/why'
+      path: '/why'
+      fullPath: '/why'
+      preLoaderRoute: typeof WhyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/signup': {
       id: '/signup'
       path: '/signup'
@@ -177,6 +208,7 @@ const rootRouteChildren: RootRouteChildren = {
   AssessmentRoute: AssessmentRoute,
   LoginRoute: LoginRoute,
   SignupRoute: SignupRoute,
+  WhyRoute: WhyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
