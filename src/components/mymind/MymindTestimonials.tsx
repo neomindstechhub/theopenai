@@ -783,9 +783,16 @@ export function MymindTestimonials() {
   };
 
   return (
-    <>
+    <section
+      style={{
+        backgroundImage: "url('/images/mymind_review_neue-1.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "top center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       {/* Section Header */}
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pt-24 pb-16 text-center flex flex-col items-center gap-3 relative z-30 bg-white">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pt-24 pb-16 text-center flex flex-col items-center gap-3 relative z-30">
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -820,18 +827,10 @@ export function MymindTestimonials() {
         </p>
       </div>
 
-      <section
+      <div
         ref={containerRef}
         id="testimonials"
         className="relative w-full overflow-hidden"
-        style={{
-          background: `
-            radial-gradient(ellipse 80% 60% at 20% 30%, rgba(255, 180, 200, 0.6) 0%, transparent 55%),
-            radial-gradient(ellipse 70% 60% at 80% 70%, rgba(255, 200, 210, 0.5) 0%, transparent 55%),
-            radial-gradient(ellipse 60% 50% at 50% 50%, rgba(255, 210, 220, 0.4) 0%, transparent 60%),
-            linear-gradient(145deg, #ffc8d0 0%, #ffd0c8 25%, #ffc8d8 55%, #f8d0e8 100%)
-          `,
-        }}
       >
         {/* 1. MOBILE BUBBLE VIEWPORT (< md) */}
         <div className="md:hidden mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20">
@@ -1189,7 +1188,7 @@ export function MymindTestimonials() {
             </div>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

@@ -17,6 +17,7 @@ import { MymindDownloads } from "@/components/mymind/MymindDownloads";
 import { MymindFooter } from "@/components/mymind/MymindFooter";
 import AddOnsSection from "@/components/AddOnsSection";
 import { MymindContact } from "@/components/mymind/MymindContact";
+import GradientArc from "@/components/GradientArc";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -63,7 +64,7 @@ function MymindPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen z-0">
       <MymindNav />
       <div
         className="relative w-full overflow-hidden"
@@ -79,12 +80,24 @@ function MymindPage() {
         <MymindHero />
         <MymindIntroVideo />
       </div>
-      <MymindManifesto />
+      <div className="relative z-0">
+        <MymindManifesto />
+        <GradientArc
+          position="absolute"
+          color1="var(--color-mm-orange)"
+          color2="var(--color-mm-red)"
+          color3="var(--color-mm-peach)"
+          glowOpacity={0.8}
+          strokeWidth={170}
+          zIndex={-1}
+          style={{
+            left: "50%",
+            bottom: "-38%",
+          }}
+        />
+      </div>
       <MymindSmartBookmarking />
-      {/* <MymindAI /> */}
-      {/* <MymindSearch /> */}
       <MymindFeatures />
-      {/* <MymindInteractiveFeatures /> */}
       <MymindTestimonials />
       <MymindUseCases />
       <MymindPhilosophy />
